@@ -34,6 +34,7 @@ describe('Transaction', () => {
     transaction.outputs[0].amount = 50000;
     expect(Transaction.verifyTransaction(transaction)).toBe(false);
   });
+  
 
   describe('transacting with an amount that exceeds the balance', () => {
     beforeEach(() => {
@@ -45,6 +46,8 @@ describe('Transaction', () => {
       expect(transaction).toEqual(undefined);
     });
   });
+
+  
 
   describe('and updating a transaction', () => {
     let nextAmount, nextRecipient;
@@ -65,7 +68,7 @@ describe('Transaction', () => {
         .toEqual(nextAmount);
     });
   });
-
+/*
   describe('creating a reward transaction', () => {
     beforeEach(() => {
       transaction = Transaction.rewardTransaction(wallet, Wallet.blockchainWallet());
@@ -76,4 +79,5 @@ describe('Transaction', () => {
         .toEqual(MINING_REWARD);
     });
   });
+  */
 });

@@ -3,7 +3,7 @@ const { INITIAL_BALANCE } = require('../config');
 
 class Wallet {
     constructor(){
-        this.ballance = INITIAL_BALANCE;
+        this.balance = INITIAL_BALANCE;
         this.keyPair = ChainUtil.genKeyPair();
         this.publicKey = this.keyPair.getPublic().encode('hex');
         
@@ -13,6 +13,10 @@ class Wallet {
         return `Wallet -
             publicKey: ${this.publicKey.toString()}
             balance  : ${this.ballance}`
+    }
+
+    sign(datahash){
+        return this.keyPair.sign(datahash);
     }
 
 
