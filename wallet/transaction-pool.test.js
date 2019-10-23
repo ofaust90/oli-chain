@@ -10,8 +10,8 @@ describe('TransactionPool', () => {
     tp = new TransactionPool();
     wallet = new Wallet();
     bc = new Blockchain();
-    transaction = wallet.createTransaction('r4nd-4dr355', 30, bc, tp);, 'r4and-4dr355', 30);
-    tp.updateOrAddTransaction(transaction);
+    transaction = wallet.createTransaction('r4nd-4dr355', 30, bc, tp); //, 'r4and-4dr355', 30);
+   
   });
 
   it('adds a transaction to the pool', () => {
@@ -55,6 +55,7 @@ describe('TransactionPool', () => {
     it('grabs valid transactions', () => {
       expect(tp.validTransactions()).toEqual(validTransactions);
     });
+    
   });
   
 });

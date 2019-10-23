@@ -38,7 +38,7 @@ describe('Wallet', () => {
       
     });
   });
-/*
+
   describe('calculating a balance', () => {
     let addBalance, repeatAdd, senderWallet;
 
@@ -84,5 +84,5 @@ describe('Wallet', () => {
       });
     });
   });
-  */
+  
 });

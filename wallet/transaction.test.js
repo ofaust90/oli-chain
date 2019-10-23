@@ -68,7 +68,7 @@ describe('Transaction', () => {
         .toEqual(nextAmount);
     });
   });
-/*
+
   describe('creating a reward transaction', () => {
     beforeEach(() => {
       transaction = Transaction.rewardTransaction(wallet, Wallet.blockchainWallet());
@@ -79,5 +79,5 @@ describe('Transaction', () => {
         .toEqual(MINING_REWARD);
     });
   });
-  */
+ 
 });
